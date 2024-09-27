@@ -1,0 +1,15 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: erpnext
+  namespace: erpnext
+spec:
+  interval: 1m
+  releaseName: frappe-bench
+  chart:
+    spec:
+      chart: ./erpnext
+      sourceRef:
+        kind: GitRepository
+        name: erpnext
+

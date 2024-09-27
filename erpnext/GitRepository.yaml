@@ -1,0 +1,16 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: erpnext
+  namespace: erpnext
+spec:
+  interval: 5m
+  url: https://github.com/rishivyasm/helm-fluxcd.git
+  ref:
+    branch: main
+  ignore: |-
+    # exclude all
+    /*
+    # include charts directory
+    !/erpnext/
+
