@@ -266,14 +266,14 @@ persistence:
 # Ingress
 ingress:
   # ingressName: ""
-  # className: ""
+  className: "nginx"
   enabled: false
   annotations: {}
-    # kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
     # cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-  - host: erp.cluster.local
+  - host: localhost
     paths:
     - path: /
       pathType: ImplementationSpecific
@@ -306,7 +306,7 @@ jobs:
   createSite:
     enabled: false
     forceCreate: false
-    siteName: "erp.cluster.local"
+    siteName: "localhost"
     adminPassword: "changeit"
     installApps:
     - "erpnext"

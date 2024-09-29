@@ -39,9 +39,9 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: {{ $fullName }}
+                name: frappe-bench-erpnext 
                 port:
-                  number: {{ $svcPort }}
+                  number: 8080
         {{- end }}
   {{- end }}
 {{- end }}
