@@ -1,0 +1,16 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: erpnext-kustomization
+  namespace: erpnext-v1
+spec:
+  interval: 10m0s
+  path:  ./erpnext
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: erpnext
+    namespace: erpnext-v1
+  targetNamespace: erpnext-v1
+  wait: true
+
