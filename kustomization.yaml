@@ -5,7 +5,7 @@ metadata:
   namespace: erpnext-v1
 spec:
   interval: 10m0s
-  path:  ./erpnext
+  path:  .
   prune: true
   sourceRef:
     kind: GitRepository
